@@ -7,8 +7,14 @@
   <title>Frontend Caching Strategy</title>
 </head>
 <body>
-  <button id="fetch" type="button">Fetch</button>
+  <form autocomplete="off">
+    <label for="key">Key:</label>
+    <input type="text" id="key">
+    <button id="fetch" type="button">Fetch</button>
+  </form>
+  <h2>Output:</h2>
   <output id="output"></output>
+  <h2>Cached:</h2>
   <pre id="cached"></pre>
   <script src="./src/index.ts"></script>
 </body>
