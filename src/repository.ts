@@ -5,8 +5,9 @@ type Res = {
   name: string
 }
 
-export function fetch(endpoint: string): Promise<Res> | Res {
-  const data = cache.get(endpoint)
+export async function fetch(endpoint: string): Promise<Res> {
+  const data = await cache.get(endpoint)
+
   if (data !== undefined) {
     return data as Res
   }
